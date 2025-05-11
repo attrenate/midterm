@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header #input-nav, header #nav-items-img {
+  display: flex;
+}
+header #input-nav {
+  justify-content: space-around;
+}
+header #input-nav .nav-items {
+  display: inline-block;
+}
+header #input-nav #nav-search {
+  width: 610px;
+  height: 45px;
+  padding-right: 40px;
+}
+header #input-nav #search-btn {
+  background-color: inherit;
+  border-color: inherit;
+}/*# sourceMappingURL=index.css.map */
