@@ -1,7 +1,7 @@
 // Mixins
 @mixin center(){
     display: flex;
-    justify-content: center;
+    justify-self: center;
     align-items: center;
 }
 @mixin column(){
@@ -13,64 +13,84 @@
     margin: 0;
     padding: 0;
 }
-header{
-    margin-top: 1rem;
-    #input-nav, #nav-items-img{
-        display: flex;
-    }
-    #input-nav{
-        justify-content: space-around;
-       .nav-items{
-        display: inline-block;
-       }
-        #nav-search{
-            width: 610px;
-            height: 45px;
-            padding-right: 40px;
-        }
-        #search-btn{
-            
-            background-color: inherit;
-            border-color: inherit;
-        }
-        
-    }
-    #nav-items-img{
-       gap: 1rem;
-        #heart, #authorize, #sails{
-            height: 28px;
-            width: 30px;
-            cursor: pointer;
-        }
-    }
-    #catalog{
-        display: flex;
-        justify-content: space-around;
-        .site-item{
+body{
+
+    header{
+        margin-top: 1rem;
+        #input-nav, #nav-items-img{
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: pointer;
-            .item-p{
-                color: #0B3954;
-                font-size: 1rem;
+        }
+        #input-nav{
+            justify-content: space-around;
+           .nav-items{
+            display: inline-block;
+           }
+            #nav-search{
+                width: 610px;
+                height: 45px;
+                padding-right: 40px;
+            }
+            #search-btn{
+                
+                background-color: inherit;
+                border-color: inherit;
+            }
+            
+        }
+        #nav-items-img{
+           gap: 1rem;
+            #heart, #authorize, #sails{
+                height: 28px;
+                width: 30px;
                 cursor: pointer;
             }
         }
-        #sale-btn{
-            background-color: #FFB128;
-            width: 170px;
-            height: 79px;
-            padding-top: 15px;
-            padding-bottom: 10px;
-            cursor: pointer;
-            border-color: #FFB128;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            #btn-p{
-                color: white;
-                font-weight: 700;
+        #catalog{
+            display: flex;
+            justify-content: space-around;
+            .site-item{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+                .item-p{
+                    color: #0B3954;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
             }
+            #sale-btn{
+                background-color: #FFB128;
+                width: 170px;
+                height: 79px;
+                padding-top: 15px;
+                padding-bottom: 10px;
+                cursor: pointer;
+                border-color: #FFB128;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                #btn-p{
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    #luxury-frnt{
+        width: 100%;
+        height: 740px;
+        background-color: black;
+        
+        #blue-background{
+            background-color: #0B3954;
+            width: 90%;
+            height: 670px;
+            @include center();
+            
+        }
+        #furniture{
+            @include center();
+            
         }
     }
 }
