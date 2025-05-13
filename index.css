@@ -66,17 +66,23 @@ body #luxury-frnt {
   width: 100%;
   height: 740px;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body #luxury-frnt #blue-background {
   background-color: #0B3954;
-  width: 90%;
-  height: 670px;
+  width: 95%;
+  height: 90%;
+  border-radius: 10px;
   display: flex;
-  justify-self: center;
+  justify-content: center;
   align-items: center;
 }
 body #luxury-frnt #furniture {
   display: flex;
-  justify-self: center;
+  justify-content: center;
   align-items: center;
+  width: 95%;
+  height: 80%;
 }/*# sourceMappingURL=index.css.map */
