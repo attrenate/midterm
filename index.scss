@@ -3,6 +3,11 @@ $primary-font-stack: 'font 1', 'sans-serif';
 $color-blue-background: #0B3954;
 $color-white: #FFFFFF;
 $color-primary-accent: #FFB128; 
+$gallery-width: 100%;
+$column-width-large: 640px; 
+$card-height-large: 600px; 
+$card-border-radius: 32px;
+$image-path: 'images/'; 
 
 
 // Mixins
@@ -273,5 +278,158 @@ main{
             }
         }
     }
+
+
+// Base styles for the gallery section
+#gallery-section {
+  width: $gallery-width;
+  max-width: ($column-width-large * 3); 
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 20px 15px;
+
+  // Clearfix for floated columns
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+// Styles for each gallery column
+.gallery-column {
+  float: left;
+  width: percentage(1/3); 
+  min-height: $card-height-large; 
+  box-sizing: border-box;
+  padding: 0 12.5px;
+  margin-bottom: 25px; 
+}
+
+// Styles for each image card
+.image-card {
+  width: 100%; // Takes full width of its column
+  height: $card-height-large;
+  border-radius: $card-border-radius;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 30px;
+  box-sizing: border-box;
+  color: white; // Default text color for items inside
+
+  // Gradient overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.7) 100%);
+    border-radius: inherit;
+    z-index: 0;
+  }
+
+  .card-text-content {
+    position: relative; // To ensure it's above the pseudo-element overlay
+    z-index: 1;
+  }
+
+  .text-time-to {
+    font-size: 1em; 
+    margin-bottom: 0.3em;
+    line-height: 1.2;
+  }
+
+  .text-title {
+    font-size: 2em; 
+    margin: 0;
+    line-height: 1.1;
+  }
+}
+
+
+#bedroom-image-card {
+  background-image: url($image-path + 'fd4bf3dfa09808324665e786535fcf55223cfe66.png');
+}
+
+#office-image-card {
+  background-image: url($image-path + 'd469486b25078c4de675de8127442af749015dba.png');
+}
+
+#kitchen-image-card {
+  background-image: url($image-path + 'ac127afb472ec6dc48494a267045dab940270afe.png');
+}
+
+// --- Responsive Adjustments ---
+
+
+@media (max-width: 1280px) {
+    .gallery-column {
+        width: percentage(1/2); 
+    }
+}
+
+
+// For smaller tablets and mobile landscape (stack to single column)
+@media (max-width: 768px) {
+  #gallery-section {
+    padding: 15px 10px; 
+  }
+
+  .gallery-column {
+    float: none;
+    width: 100%; 
+    padding: 0; 
+    margin-bottom: 20px; 
+
+    &:last-child {
+      margin-bottom: 0; 
+    }
+  }
+
+  .image-card {
+    height: 450px; 
+    padding: 25px; 
+
+    .text-time-to {
+      font-size: 0.9em;
+    }
+
+    .text-title {
+      font-size: 1.8em;
+    }
+  }
+}
+
+// For mobile phones (further adjustments)
+@media (max-width: 480px) {
+  #gallery-section {
+    padding: 10px 5px;
+  }
+
+  .image-card {
+    height: 350px;
+    padding: 20px; 
+    border-radius: $card-border-radius - 10px; 
+
+    .text-time-to {
+      font-size: 0.85em;
+    }
+
+    .text-title {
+      font-size: 1.6em;
+    }
+  }
+}
 }
 }
