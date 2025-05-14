@@ -155,4 +155,85 @@ body .hero-banner .hero-button-collection {
   background-color: #FFFFFF;
   color: #FFB128;
   border-radius: 45px;
+}
+body main #products {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+body main #products #products-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body main #products #products-wrapper .product {
+  display: flex;
+  justify-content: space-between;
+}
+body main #products #products-wrapper .product #h2-p {
+  color: #0B3954;
+  font-family: "font 1", "sans-serif";
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 4rem;
+}
+body main #products #products-wrapper .product h2 {
+  color: #FFB128;
+  font-family: "font 1", "sans-serif";
+  font-weight: 600;
+  font-size: 3rem;
+  margin-left: 4rem;
+}
+body main #products #products-wrapper .product h2 #blue {
+  font-family: "font 1", "sans-serif";
+  font-weight: 600;
+  font-size: 3rem;
+  color: #0B3954;
+}
+body main #products #products-wrapper .product #statistics {
+  display: flex;
+  gap: 1rem;
+}
+body main #products #products-wrapper .product #statistics .yellow-box {
+  width: 22px;
+  height: 7px;
+  background-color: #FFB128;
+}
+body main #products #products-wrapper .product #statistics .stat {
+  font-family: "font 1", "sans-serif";
+  font-weight: 700;
+  font-size: 24px;
+  color: #0B3954;
+  margin-right: 2rem;
+}
+body main #products #products-wrapper .product #statistics .grey-text {
+  font-family: "Font 2", "sans-serif";
+  font-weight: 400;
+  font-size: 16px;
+  color: #5C676D;
+  margin-right: 2rem;
+}
+body main #products #list-of-products {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+}
+body main #products #list-of-products .lis-item-wrapper {
+  width: 179px;
+  height: 198px;
+  background-color: #F9F9F9;
+  cursor: pointer;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+body main #products #list-of-products .lis-item-wrapper .img-p {
+  font-family: "font 1", "sans-serif";
+  font-weight: 600;
+  font-size: 20px;
+  color: #0B3954;
 }/*# sourceMappingURL=index.css.map */
