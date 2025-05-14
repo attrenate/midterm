@@ -190,4 +190,88 @@ body{
         border-radius: 45px; 
     }
 }
+main{
+    #products{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        
+        #products-wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            .product{
+                display: flex;
+                justify-content: space-between;
+                #h2-p{
+                   color: #0B3954;
+                   font-family: $primary-font-stack;
+                   font-size: 12px;
+                   font-weight: 600; 
+                   margin-left: 4rem;
+                }
+                h2{
+                    color: #FFB128;
+                    font-family: $primary-font-stack;
+                    font-weight: 600;
+                    font-size: 3rem;
+                    margin-left: 4rem;
+                    #blue{
+                        font-family: $primary-font-stack;
+                        font-weight: 600;
+                        font-size: 3rem;
+                        color: #0B3954;
+                    }
+                }
+                #statistics{
+                    display: flex;
+                    gap: 1rem;
+                    .yellow-box{
+                        width: 22px;
+                        height: 7px;
+                        background-color: #FFB128;
+                    }
+                    .stat{
+                        font-family: $primary-font-stack;
+                        font-weight: 700;
+                        font-size: 24px;
+                        color: $color-blue-background;
+                        margin-right: 2rem;
+                    }
+                    .grey-text{
+                        font-family: 'Font 2', 'sans-serif';
+                        font-weight: 400;
+                        font-size: 16px;
+                        color: #5C676D;
+                        margin-right: 2rem;
+                    }
+                }
+            }
+        }
+        #list-of-products{
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            text-align: center;
+            .lis-item-wrapper{
+                width: 179px;
+                height: 198px;
+                background-color: #F9F9F9;
+                cursor: pointer;
+                border-radius: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                .img-p{
+                    font-family: $primary-font-stack;
+                    font-weight: 600;
+                    font-size: 20px;
+                    color: #0B3954;
+                }
+            }
+        }
+    }
+}
 }
