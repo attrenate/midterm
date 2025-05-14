@@ -236,4 +236,122 @@ body main #products #list-of-products .lis-item-wrapper .img-p {
   font-weight: 600;
   font-size: 20px;
   color: #0B3954;
+}
+body main #gallery-section {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 20px 15px;
+}
+body main #gallery-section::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+body main .gallery-column {
+  float: left;
+  width: 33.3333333333%;
+  min-height: 600px;
+  box-sizing: border-box;
+  padding: 0 12.5px;
+  margin-bottom: 25px;
+}
+body main .image-card {
+  width: 100%;
+  height: 600px;
+  border-radius: 32px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 30px;
+  box-sizing: border-box;
+  color: white;
+}
+body main .image-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.7) 100%);
+  border-radius: inherit;
+  z-index: 0;
+}
+body main .image-card .card-text-content {
+  position: relative;
+  z-index: 1;
+}
+body main .image-card .text-time-to {
+  font-size: 1em;
+  margin-bottom: 0.3em;
+  line-height: 1.2;
+}
+body main .image-card .text-title {
+  font-size: 2em;
+  margin: 0;
+  line-height: 1.1;
+}
+body main #bedroom-image-card {
+  background-image: url("images/fd4bf3dfa09808324665e786535fcf55223cfe66.png");
+}
+body main #office-image-card {
+  background-image: url("images/d469486b25078c4de675de8127442af749015dba.png");
+}
+body main #kitchen-image-card {
+  background-image: url("images/ac127afb472ec6dc48494a267045dab940270afe.png");
+}
+@media (max-width: 1280px) {
+  body main .gallery-column {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  body main #gallery-section {
+    padding: 15px 10px;
+  }
+  body main .gallery-column {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  body main .gallery-column:last-child {
+    margin-bottom: 0;
+  }
+  body main .image-card {
+    height: 450px;
+    padding: 25px;
+  }
+  body main .image-card .text-time-to {
+    font-size: 0.9em;
+  }
+  body main .image-card .text-title {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 480px) {
+  body main #gallery-section {
+    padding: 10px 5px;
+  }
+  body main .image-card {
+    height: 350px;
+    padding: 20px;
+    border-radius: 22px;
+  }
+  body main .image-card .text-time-to {
+    font-size: 0.85em;
+  }
+  body main .image-card .text-title {
+    font-size: 1.6em;
+  }
 }/*# sourceMappingURL=index.css.map */
