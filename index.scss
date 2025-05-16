@@ -60,6 +60,7 @@ body{
         #catalog{
             display: flex;
             justify-content: space-around;
+            position: sticky;
             .site-item{
                 display: flex;
                 flex-direction: column;
@@ -84,6 +85,10 @@ body{
                 #btn-p{
                     color: white;
                     font-weight: 700;
+                }
+                &:hover{
+                    background-color: #0B3954;
+                    border-color: #0B3954;
                 }
             }
         }
@@ -177,6 +182,11 @@ body{
         text-transform: uppercase; 
         padding: 0 30px; 
         text-align: center;
+        &:hover{
+            background-color: #FFB128;
+            color: white;
+            transition: ease-in-out 0.3s;
+        }
     }
 
     .hero-button-shop { 
@@ -185,6 +195,10 @@ body{
         background-color: $color-primary-accent;
         color: $color-white;
         border-radius: 45px; 
+        &:hover{
+            background-color: white;
+            color: #FFB128;
+        }
     }
 
     .hero-button-collection { 
@@ -403,7 +417,7 @@ main{
             height: 44px;
             color: white;
             border-color: #FFB128;
-            cursor: pointer;
+            cursor: pointers;
         }
     }
 }
