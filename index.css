@@ -35,7 +35,6 @@ body header #nav-items-img #heart, body header #nav-items-img #authorize, body h
 body header #catalog {
   display: flex;
   justify-content: space-around;
-  position: sticky;
 }
 body header #catalog .site-item {
   display: flex;
@@ -363,4 +362,58 @@ body main #get-ready #child-wrapper-2 #trends {
   color: white;
   border-color: #FFB128;
   cursor: pointers;
+}
+
+@media (max-width: 768px) {
+  #nav-search {
+    width: 333px !important;
+    height: 45px !important;
+    border-radius: 10px;
+  }
+  #search-btn {
+    transform: translateY(-150%) !important;
+  }
+  .hero-banner {
+    background-color: white !important;
+  }
+  .hero-banner-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hero-banner-content-wrapper .hero-furniture-image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .hero-background-shape, #catalog {
+    display: none !important;
+  }
+  #gallery-section {
+    padding: 15px 10px;
+  }
+  .hero-furniture-image {
+    width: 691px;
+    height: 719.3400268555px;
+    border-radius: 10px;
+  }
+  .gallery-column {
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .gallery-column:last-child {
+    margin-bottom: 0;
+  }
+  .image-card {
+    height: 450px;
+    padding: 25px;
+  }
+  .image-card .text-time-to {
+    font-size: 0.9em;
+  }
+  .image-card .text-title {
+    font-size: 1.8em;
+  }
 }/*# sourceMappingURL=index.css.map */
