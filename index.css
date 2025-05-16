@@ -35,6 +35,7 @@ body header #nav-items-img #heart, body header #nav-items-img #authorize, body h
 body header #catalog {
   display: flex;
   justify-content: space-around;
+  position: sticky;
 }
 body header #catalog .site-item {
   display: flex;
@@ -61,6 +62,10 @@ body header #catalog #sale-btn {
 body header #catalog #sale-btn #btn-p {
   color: white;
   font-weight: 700;
+}
+body header #catalog #sale-btn:hover {
+  background-color: #0B3954;
+  border-color: #0B3954;
 }
 body .hero-banner {
   width: 100%;
@@ -142,12 +147,22 @@ body .hero-banner .hero-button-collection {
   padding: 0 30px;
   text-align: center;
 }
+body .hero-banner .hero-button-shop:hover,
+body .hero-banner .hero-button-collection:hover {
+  background-color: #FFB128;
+  color: white;
+  transition: ease-in-out 0.3s;
+}
 body .hero-banner .hero-button-shop {
   width: 152px;
   height: 64px;
   background-color: #FFB128;
   color: #FFFFFF;
   border-radius: 45px;
+}
+body .hero-banner .hero-button-shop:hover {
+  background-color: white;
+  color: #FFB128;
 }
 body .hero-banner .hero-button-collection {
   width: 185px;
@@ -347,5 +362,5 @@ body main #get-ready #child-wrapper-2 #trends {
   height: 44px;
   color: white;
   border-color: #FFB128;
-  cursor: pointer;
+  cursor: pointers;
 }/*# sourceMappingURL=index.css.map */
