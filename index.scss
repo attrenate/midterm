@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'mixins';
+
 // Variables
 $primary-font-stack: 'font 1', 'sans-serif';
 $color-blue-background: #0B3954;
@@ -26,7 +29,6 @@ $image-path: 'images/';
     padding: 0;
 }
 body{
-
     header{
         margin-top: 1rem;
         #input-nav, #nav-items-img{
