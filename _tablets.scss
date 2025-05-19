@@ -1,17 +1,79 @@
 // Tablet styles
 @media (max-width: 768px) {
-    #nav-search {
-        width: 333px !important;
-        height: 45px !important;
-        border-radius: 10px;
+    header {
+        width: 768px;
+        height: 83px;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+
+        #input-nav {
+            padding: 30px;
+            height: 43px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav-items {
+                &:first-child {
+                    width: 170px;
+                    height: 28.75px;
+                }
+            }
+
+            #nav-search {
+                width: 333px !important;
+                height: 45px !important;
+                border-radius: 6px;
+                background-color: #F5F5F5;
+                padding: 10px 40px;
+                position: relative;
+
+                &::placeholder {
+                    color: #0B3954;
+                }
+            }
+
+            #search-btn {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                padding: 0;
+            }
+
+            #nav-items-img {
+                display: flex;
+                align-items: center;
+                gap: 0;
+
+                #sails {
+                    width: 45px;
+                    height: 20.98px;
+                    margin-right: 5px;
+                }
+
+                #random-num {
+                    font-size: 14px;
+                    color: #0B3954;
+                    margin: 0 5px;
+                }
+
+                #heart, #authorize {
+                    width: 20px;
+                    height: 20px;
+                    margin: 0 5px;
+                }
+            }
+        }
     }
-    
-    #search-btn {
-        transform: translateY(-150%) !important;
-    }
-    
+
     .hero-banner {
         background-color: white !important;
+        height: 770px;
+        position: relative;
+        overflow: hidden;
     }
     
     .hero-banner-content-wrapper {
@@ -19,10 +81,124 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        position: relative;
+        width: 768px;
+        height: 770px;
 
         .hero-furniture-image {
-            max-width: 300px;
-            margin: 0 auto;
+            width: 691px;
+            height: 719.34px;
+            border-radius: 16px;
+            margin: 19px 38px;
+            object-fit: cover;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 59px;
+            left: 78px;
+            color: white;
+
+            .brand-name {
+                font-size: 15px;
+                margin-bottom: 15px;
+            }
+
+            .main-title {
+                font-size: 48px;
+                line-height: 1.2;
+                margin-bottom: 20px;
+            }
+        }
+
+        .hero-buttons {
+            position: absolute;
+            top: 266px;
+            left: 78px;
+            display: flex;
+            gap: 27px;
+
+            .btn-shop {
+                width: 209.56px;
+                height: 80px;
+                background-color: #FFB128;
+                border-radius: 45px;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                text-decoration: none;
+            }
+
+            .btn-collection {
+                width: 256.05px;
+                height: 60px;
+                background-color: white;
+                border-radius: 45px;
+                color: #FFB128;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                text-decoration: none;
+            }
+        }
+
+        .plus-buttons {
+            position: absolute;
+            width: 69px;
+            height: 69px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:nth-child(1) {
+                top: 557px;
+                left: 174px;
+            }
+
+            &:nth-child(2) {
+                top: 525px;
+                left: 568px;
+            }
+
+            &:nth-child(3) {
+                top: 399px;
+                left: 451px;
+            }
+
+            .plus-icon {
+                width: 23.66px;
+                height: 23.66px;
+                background-color: #FFB128;
+                border-radius: 50%;
+                position: relative;
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: white;
+                }
+
+                &::before {
+                    width: 0.99px;
+                    height: 6.9px;
+                    top: 8.34px;
+                    left: 11.34px;
+                }
+
+                &::after {
+                    width: 6.9px;
+                    height: 0.99px;
+                    top: 11.34px;
+                    left: 8.34px;
+                }
+            }
         }
     }
     
@@ -34,12 +210,6 @@
         padding: 15px 10px; 
     }
     
-    .hero-furniture-image {
-        width: 691px;
-        height: 719.3400268554688px;
-        border-radius: 10px;
-    }
-
     .gallery-column {
         float: none;
         width: 100%; 
