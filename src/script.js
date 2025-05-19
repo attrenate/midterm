@@ -1,9 +1,8 @@
-// Wait for the DOM to be fully loaded
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Get all category cards
   const categoryCards = document.querySelectorAll('.category-card');
   
-  // Add click event listener to each card
+  // click event listener to each card
   categoryCards.forEach(card => {
     card.addEventListener('click', (e) => {
       e.preventDefault();
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Add hover effects
+  // hover effects
   categoryCards.forEach(card => {
     card.addEventListener('mouseenter', () => {
       card.style.transform = 'translateY(-5px)';
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Add responsive behavior
+  // responsive behavior
   function handleResize() {
     const grid = document.querySelector('.category-grid');
     if (!grid) return;
@@ -53,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Listen for window resize
   window.addEventListener('resize', handleResize);
 
-  // Add smooth scroll behavior
+  // smooth scroll behavior
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Add loading animation for images
+  // loading animation for images
   const images = document.querySelectorAll('img');
   images.forEach(img => {
     img.addEventListener('load', () => {
@@ -74,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Add keyboard navigation
+  // keyboard navigation
   document.addEventListener('keydown', (e) => {
     const activeCard = document.querySelector('.category-card.active');
     if (!activeCard) return;
